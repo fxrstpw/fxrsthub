@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Temperature Log</title>
+    <link rel="stylesheet" href="tem.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="luxury-navbar">
+        <div class="logo">
+            <a href="#">Web Application API</a>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="viewconfig.html">View Config</a></li>
+            <li><a href="tem.html">Temperature Log</a></li>
+            <li><a href="viewlog.html">View Logs</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Form Container -->
+    <div class="temperature-form-container">
+        <h2>Update Temperature Log</h2>
+        
+        <form id="temperatureForm">
+            <div class="form-group">
+                <label for="droneId">Drone ID:</label>
+                <input 
+                    type="text" 
+                    id="droneId" 
+                    name="droneId" 
+                    placeholder="Enter Drone ID"
+                    required
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="temperature">Temperature (°C):</label>
+                <input 
+                    type="number" 
+                    id="temperature" 
+                    name="temperature" 
+                    placeholder="Enter Temperature"
+                    required
+                >
+            </div>
+            
+            <button type="submit" class="submit-button">
+                Update Temperature
+            </button>
+        </form>
+
+        <!-- Loading Animation -->
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+        </div>
+
+        <!-- Message Container -->
+        <div id="messageContainer" style="margin-top: 20px;"></div>
+        
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message" style="display: none;">
+            <p>ข้อมูลถูกส่งสำเร็จ!</p>
+        </div>
+
+        <!-- Result/Error Message -->
+        <div id="resultMessage" class="error-message" style="display:none;"></div>
+    </div>
+
+    <script src="tem.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('nav-active'); 
+        }
+    </script>
+</body>
+</html>

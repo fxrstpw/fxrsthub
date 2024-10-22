@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone View Config</title>
+    <link rel="stylesheet" href="viewconfig.css">
+</head>
+<body>
+
+    <nav class="luxury-navbar">
+        <div class="logo">
+            <a href="#">Web Application API</a>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="viewconfig.html">View Config</a></li>
+            <li><a href="tem.html">Temperature Log</a></li>
+            <li><a href="viewlog.html">View Logs</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="table-container">
+            <h1>Drone Configuration</h1>
+            <table id="drone-table">
+                <thead>
+                    <tr>
+                        <th>Drone ID</th>
+                        <th>Drone Name</th>
+                        <th>Light</th>
+                        <th>Maximum Speed</th>
+                        <th>Country</th>
+                        <th>Population</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Drone data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="loading" class="loading">
+        <div class="loader"></div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('nav-active');
+        }
+    </script>
+    
+    <script src="main.js"></script>
+</body>
+</html>

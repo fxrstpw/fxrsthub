@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Logs</title>
+    <link rel="stylesheet" href="viewlog.css">
+</head>
+<body>
+    <nav class="luxury-navbar">
+        <div class="logo">
+            <a href="#">Web Application API</a>
+        </div>
+
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="viewconfig.html">View Config</a></li>
+            <li><a href="tem.html">Temperature Log</a></li>
+            <li><a href="viewlog.html">View Logs</a></li>
+        </ul>
+    </nav>
+
+    <div class="table-container">
+        <h1>View Logs</h1>
+        <div class="table-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Created</th>
+                        <th>Country</th>
+                        <th>Drone ID</th>
+                        <th>Drone Name</th>
+                        <th>Celsius</th>
+                    </tr>
+                </thead>
+                <tbody id="logsBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="noLogsMessage" style="display:none;">No logs found for this drone ID.</div>
+
+    <div id="loading" class="loading">
+        <div class="loader"></div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('nav-active');
+        }
+    </script>
+
+    <script src="viewlog.js"></script>
+</body>
+</html>

@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Luxury Navbar</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    65010703
+    <nav class="luxury-navbar">
+        <div class="logo">
+            <a href="#">Web Application API</a>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="viewconfig.html">View Config</a></li>
+            <li><a href="tem.html">Temperature Log</a></li>
+            <li><a href="viewlog.html">View Logs</a></li>
+        </ul>
+    </nav>
+
+    <div class="card">
+        <h1 class="title">Profile</h1>
+        <table class="invisible-table">
+            <tr>
+                <td class="profile-picture">
+                    <img src="https://scontent.fbkk22-2.fna.fbcdn.net/v/t39.30808-6/464332327_1575781216353738_2735966243531374111_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEaeezoMF9e-7yYgYt2yTAAUbS3SaWrP7xRtLdJpas_vOnrXH_Otu7l6xjGbx4fOQ-64XdJTxrklm5CV81PfuBh&_nc_ohc=1h4JaX9C9p0Q7kNvgHJB8Uk&_nc_zt=23&_nc_ht=scontent.fbkk22-2.fna&_nc_gid=ATs2r2_6V-wQgBBKWdjMSda&oh=00_AYBjCAFviBQU2jZqJ1x_S0MYIzaWaJ_sk_FxucstxMp21Q&oe=671D7BEA" alt="Profile Picture">
+                </td>
+            </tr>
+            <tr>
+                <td class="login">Pollawit Choonkesa</td>
+            </tr>
+            
+            <tr>
+                <td class="social-networks">
+                    <a href="https://www.facebook.com/pollawit.ch?mibextid=LQQJ4d" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/fxrstpw/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://line.me/ti/p/wdEAh7WpKe" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/LINE_New_App_Icon_%282020-12%29.png" alt="Line">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('nav-active');
+        }
+    </script>
 </body>
 </html>
